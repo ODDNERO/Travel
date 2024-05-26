@@ -64,7 +64,9 @@
 			children = (
 				CE693F412C03DA3200B77A20 /* AppDelegate.swift */,
 				CE693F432C03DA3200B77A20 /* SceneDelegate.swift */,
-				CE693F452C03DA3200B77A20 /* ViewController.swift */,
+				CE693F552C03DE8900B77A20 /* Magazine.swift */,
+				CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */,
+				CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */,
 				CE693F472C03DA3200B77A20 /* Main.storyboard */,
 				CE693F4A2C03DA3400B77A20 /* Assets.xcassets */,
 				CE693F4C2C03DA3400B77A20 /* LaunchScreen.storyboard */,
@@ -150,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE693F462C03DA3200B77A20 /* ViewController.swift in Sources */,
+				CE693F562C03DE8900B77A20 /* Magazine.swift in Sources */,
+				CE693F5D2C03E67A00B77A20 /* TravelMagazineTableViewCell.swift in Sources */,
 				CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */,
 				CE693F442C03DA3200B77A20 /* SceneDelegate.swift in Sources */,
+				CE693F5B2C03E58A00B77A20 /* TravelMagazineTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
