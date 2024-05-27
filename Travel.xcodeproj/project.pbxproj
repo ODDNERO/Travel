@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE64D5252C04A858006A14A7 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5242C04A858006A14A7 /* DateFormatter+.swift */; };
 		CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F412C03DA3200B77A20 /* AppDelegate.swift */; };
 		CE693F442C03DA3200B77A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F432C03DA3200B77A20 /* SceneDelegate.swift */; };
 		CE693F492C03DA3200B77A20 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE693F482C03DA3200B77A20 /* Base */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE64D5242C04A858006A14A7 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		CE693F3E2C03DA3200B77A20 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE693F412C03DA3200B77A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE693F432C03DA3200B77A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		CE693F402C03DA3200B77A20 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				CE64D5242C04A858006A14A7 /* DateFormatter+.swift */,
 				CE693F412C03DA3200B77A20 /* AppDelegate.swift */,
 				CE693F432C03DA3200B77A20 /* SceneDelegate.swift */,
 				CE693F552C03DE8900B77A20 /* Magazine.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE64D5252C04A858006A14A7 /* DateFormatter+.swift in Sources */,
 				CE693F562C03DE8900B77A20 /* Magazine.swift in Sources */,
 				CE693F5D2C03E67A00B77A20 /* TravelMagazineTableViewCell.swift in Sources */,
 				CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */,
