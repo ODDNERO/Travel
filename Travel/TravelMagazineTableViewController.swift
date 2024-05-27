@@ -9,11 +9,12 @@ import UIKit
 import Kingfisher
 
 class TravelMagazineTableViewController: UITableViewController {
-    var magazineInfo = MagazineInfo()
+    var magazineList = MagazineInfo().magazineList
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "여행 매거진"
         tableView.rowHeight = 436
     }
 
@@ -23,16 +24,17 @@ class TravelMagazineTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return magazineInfo.magazineList.count
+        return magazineList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "magazineCell", for: indexPath) as! TravelMagazineTableViewCell
         
-        let cellImage: String = magazineInfo.magazineList[indexPath.row].photoURL
-        let cellImageURL = URL(string: cellImage)
-        cell.magazineImageView.kf.setImage(with: cellImageURL)
+        cell.configureCell(data: magazineList[indexPath.row])
         
         return cell
     }
 }
+
+
+
