@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="180.99999988079071" id="KGk-i7-Jjw" customClass="RestaurantTableViewCell" customModule="Travel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="181"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="517" height="181"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uMb-zU-39w">
+                        <rect key="frame" x="10" y="10" width="161" height="161"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uMb-zU-39w" secondAttribute="height" multiplier="1:1" id="YYk-Os-f5J"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V3-bo-Bky">
+                        <rect key="frame" x="458" y="138" width="51" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98564200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVc-1g-XpI">
+                        <rect key="frame" x="187" y="73" width="322" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="18" id="f7D-oY-GSo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 영등포구 선유로 33 문래대림아파트" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-dx-rs7">
+                        <rect key="frame" x="187" y="45" width="322" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="ROe-Ky-V52"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-2677-6339" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-PR-i6i">
+                        <rect key="frame" x="187" y="147" width="104" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGz-49-wSc">
+                        <rect key="frame" x="6" y="6" width="57" height="35"/>
+                        <color key="backgroundColor" red="1" green="0.89788711330000004" blue="0.46320268180000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="한식"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24시전주명가콩나물국밥 문래점" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyL-Jj-xyY">
+                        <rect key="frame" x="187" y="10" width="322" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Zi1-DR-o7J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5V3-bo-Bky" secondAttribute="bottom" constant="8" id="0NK-ro-LYB"/>
+                    <constraint firstItem="LyL-Jj-xyY" firstAttribute="top" secondItem="uMb-zU-39w" secondAttribute="top" id="2Uh-ma-2AZ"/>
+                    <constraint firstItem="BtZ-dx-rs7" firstAttribute="top" secondItem="LyL-Jj-xyY" secondAttribute="bottom" constant="5" id="4cY-oA-sDS"/>
+                    <constraint firstAttribute="trailing" secondItem="5V3-bo-Bky" secondAttribute="trailing" constant="8" id="6Zj-DI-WGz"/>
+                    <constraint firstItem="xVc-1g-XpI" firstAttribute="leading" secondItem="uMb-zU-39w" secondAttribute="trailing" constant="16" id="A6r-X4-g7P"/>
+                    <constraint firstItem="m8w-PR-i6i" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xVc-1g-XpI" secondAttribute="bottom" constant="8" id="Esb-J7-kXj"/>
+                    <constraint firstItem="WGz-49-wSc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="JZ3-bE-6zV"/>
+                    <constraint firstItem="BtZ-dx-rs7" firstAttribute="trailing" secondItem="LyL-Jj-xyY" secondAttribute="trailing" id="LbK-iw-9tP"/>
+                    <constraint firstItem="xVc-1g-XpI" firstAttribute="trailing" secondItem="BtZ-dx-rs7" secondAttribute="trailing" id="O6G-ic-aFa"/>
+                    <constraint firstItem="m8w-PR-i6i" firstAttribute="leading" secondItem="uMb-zU-39w" secondAttribute="trailing" constant="16" id="Ojr-Kd-T4U"/>
+                    <constraint firstItem="uMb-zU-39w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="V0Y-dC-SyB"/>
+                    <constraint firstAttribute="bottom" secondItem="m8w-PR-i6i" secondAttribute="bottom" constant="16" id="VEp-1D-KhJ"/>
+                    <constraint firstItem="xVc-1g-XpI" firstAttribute="top" secondItem="BtZ-dx-rs7" secondAttribute="bottom" constant="8" id="Vmw-J0-XdJ"/>
+                    <constraint firstItem="LyL-Jj-xyY" firstAttribute="leading" secondItem="uMb-zU-39w" secondAttribute="trailing" constant="16" id="cMO-wX-DX6"/>
+                    <constraint firstAttribute="bottom" secondItem="uMb-zU-39w" secondAttribute="bottom" constant="10" id="frL-Rp-6ol"/>
+                    <constraint firstItem="WGz-49-wSc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="h8G-BL-qv6"/>
+                    <constraint firstAttribute="trailing" secondItem="LyL-Jj-xyY" secondAttribute="trailing" constant="8" id="jAA-is-uQt"/>
+                    <constraint firstItem="BtZ-dx-rs7" firstAttribute="leading" secondItem="uMb-zU-39w" secondAttribute="trailing" constant="16" id="yVV-YG-il0"/>
+                    <constraint firstItem="uMb-zU-39w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zDl-2l-mnJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="foodCategotyButton" destination="WGz-49-wSc" id="NZL-Yv-7iR"/>
+                <outlet property="heartButton" destination="5V3-bo-Bky" id="qyl-mL-CAd"/>
+                <outlet property="restaurantAddressLabel" destination="BtZ-dx-rs7" id="jC4-eY-ev2"/>
+                <outlet property="restaurantContactLabel" destination="m8w-PR-i6i" id="xoO-8Y-7Q0"/>
+                <outlet property="restaurantImageView" destination="uMb-zU-39w" id="ktE-0z-YQy"/>
+                <outlet property="restaurantNameLabel" destination="LyL-Jj-xyY" id="AAl-yo-bkE"/>
+                <outlet property="restaurantPriceLabel" destination="xVc-1g-XpI" id="qwW-Pw-1uu"/>
+            </connections>
+            <point key="canvasLocation" x="402.29007633587787" y="-200.35211267605635"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+    </resources>
+</document>
