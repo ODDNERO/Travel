@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CE64D5252C04A858006A14A7 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5242C04A858006A14A7 /* DateFormatter+.swift */; };
+		CE64D5272C04AD92006A14A7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5262C04AD91006A14A7 /* Restaurant.swift */; };
+		CE64D52E2C04BB63006A14A7 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64D52D2C04BB63006A14A7 /* RestaurantTableViewCell.xib */; };
+		CE64D52F2C04BB63006A14A7 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D52C2C04BB63006A14A7 /* RestaurantTableViewCell.swift */; };
+		CE64D5312C04BBB0006A14A7 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5302C04BBB0006A14A7 /* RestaurantViewController.swift */; };
 		CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F412C03DA3200B77A20 /* AppDelegate.swift */; };
 		CE693F442C03DA3200B77A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F432C03DA3200B77A20 /* SceneDelegate.swift */; };
 		CE693F492C03DA3200B77A20 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE693F482C03DA3200B77A20 /* Base */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		CE64D5242C04A858006A14A7 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
+		CE64D5262C04AD91006A14A7 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		CE64D52C2C04BB63006A14A7 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		CE64D52D2C04BB63006A14A7 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
+		CE64D5302C04BBB0006A14A7 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		CE693F3E2C03DA3200B77A20 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE693F412C03DA3200B77A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE693F432C03DA3200B77A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +166,9 @@
 				CE64D5252C04A858006A14A7 /* DateFormatter+.swift in Sources */,
 				CE693F562C03DE8900B77A20 /* Magazine.swift in Sources */,
 				CE693F5D2C03E67A00B77A20 /* TravelMagazineTableViewCell.swift in Sources */,
+				CE64D5272C04AD92006A14A7 /* Restaurant.swift in Sources */,
+				CE64D5312C04BBB0006A14A7 /* RestaurantViewController.swift in Sources */,
+				CE64D52F2C04BB63006A14A7 /* RestaurantTableViewCell.swift in Sources */,
 				CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */,
 				CE693F442C03DA3200B77A20 /* SceneDelegate.swift in Sources */,
 				CE693F5B2C03E58A00B77A20 /* TravelMagazineTableViewController.swift in Sources */,
