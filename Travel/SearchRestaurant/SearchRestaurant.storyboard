@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Rg-ts-pTJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurant View Controller-->
+        <scene sceneID="1xh-08-MZY">
+            <objects>
+                <viewController id="0Rg-ts-pTJ" customClass="RestaurantViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCL-VH-Jtz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KsO-S1-Ai7">
+                                <rect key="frame" x="0.0" y="115" width="393" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-Wi-Q2d">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Rg-ts-pTJ" id="aAJ-DY-4SP"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5GU-KG-9Nv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x7o-Wi-Q2d" firstAttribute="trailing" secondItem="5GU-KG-9Nv" secondAttribute="trailing" id="1ol-wj-4Qg"/>
+                            <constraint firstItem="KsO-S1-Ai7" firstAttribute="top" secondItem="x7o-Wi-Q2d" secondAttribute="bottom" id="6jv-rA-tFz"/>
+                            <constraint firstItem="KsO-S1-Ai7" firstAttribute="trailing" secondItem="5GU-KG-9Nv" secondAttribute="trailing" id="7Og-gO-7o6"/>
+                            <constraint firstItem="x7o-Wi-Q2d" firstAttribute="top" secondItem="5GU-KG-9Nv" secondAttribute="top" id="XVF-Cv-XQk"/>
+                            <constraint firstAttribute="bottom" secondItem="KsO-S1-Ai7" secondAttribute="bottom" id="jNR-A1-bgH"/>
+                            <constraint firstItem="KsO-S1-Ai7" firstAttribute="leading" secondItem="5GU-KG-9Nv" secondAttribute="leading" id="wpe-Tc-v4y"/>
+                            <constraint firstItem="x7o-Wi-Q2d" firstAttribute="leading" secondItem="5GU-KG-9Nv" secondAttribute="leading" id="zmE-eT-Grv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JNU-rh-X7F"/>
+                    <connections>
+                        <outlet property="restaurantSearchBar" destination="x7o-Wi-Q2d" id="vyA-ay-3fc"/>
+                        <outlet property="restaurantTableView" destination="KsO-S1-Ai7" id="dXl-Ce-NKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXB-3d-sLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="547"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
