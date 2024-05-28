@@ -26,20 +26,53 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         restaurantTableView.delegate = self
         restaurantTableView.dataSource = self
         restaurantSearchBar.delegate = self
+        
+        configureBarView()
     }
     
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return filteredList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         
-        let data = restaurantList[indexPath.row]
+        let data = filteredList[indexPath.row]
         cell.configureCell(data: data)
         
         return cell
+    }
+}
+
+extension RestaurantViewController {
+    func configureBarView() {
+        navigationItem.title = "식당 🔍"
+        
+        let koreanFood = UIBarButtonItem(title: "한식", style: .plain, target: self, action: #selector(koreanFoodButtonClicked))
+        koreanFood.tintColor = .red
+        
+        let allFood = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allFoodButtonClicked))
+        navigationItem.leftBarButtonItems = [koreanFood, allFood]
+        allFood.tintColor = .black
+    }
+    
+    @objc func koreanFoodButtonClicked() {
+        var koreanFood: [Restaurant] = []
+        
+        for restaurant in restaurantList {
+            if restaurant.category == "한식" {
+                koreanFood.append(restaurant)
+            }
+        }
+        
+        filteredList = koreanFood
+        restaurantTableView.reloadData()
+    }
+    
+    @objc func allFoodButtonClicked() {
+        filteredList = restaurantList
+        restaurantTableView.reloadData()
     }
 }
