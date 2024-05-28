@@ -53,6 +53,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE55E9E22C05FF4300F69397 /* TravelMagazine */ = {
+			isa = PBXGroup;
+			children = (
+				CE693F552C03DE8900B77A20 /* Magazine.swift */,
+				CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */,
+				CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */,
+			);
+			path = TravelMagazine;
+			sourceTree = "<group>";
+		};
+		CE55E9E32C06117600F69397 /* SearchRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				CE64D5262C04AD91006A14A7 /* Restaurant.swift */,
+				CE64D5302C04BBB0006A14A7 /* RestaurantViewController.swift */,
+				CE64D52C2C04BB63006A14A7 /* RestaurantTableViewCell.swift */,
+				CE64D52D2C04BB63006A14A7 /* RestaurantTableViewCell.xib */,
+			);
+			path = SearchRestaurant;
+			sourceTree = "<group>";
+		};
+		CE55E9E42C0611D000F69397 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE64D5242C04A858006A14A7 /* DateFormatter+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE55E9E52C0611DB00F69397 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE693F412C03DA3200B77A20 /* AppDelegate.swift */,
+				CE693F432C03DA3200B77A20 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		CE693F352C03DA3200B77A20 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +110,10 @@
 		CE693F402C03DA3200B77A20 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
-				CE64D5242C04A858006A14A7 /* DateFormatter+.swift */,
-				CE693F412C03DA3200B77A20 /* AppDelegate.swift */,
-				CE693F432C03DA3200B77A20 /* SceneDelegate.swift */,
-				CE693F552C03DE8900B77A20 /* Magazine.swift */,
-				CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */,
-				CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */,
+				CE55E9E52C0611DB00F69397 /* App */,
+				CE55E9E42C0611D000F69397 /* Extension */,
+				CE55E9E22C05FF4300F69397 /* TravelMagazine */,
+				CE55E9E32C06117600F69397 /* SearchRestaurant */,
 				CE693F472C03DA3200B77A20 /* Main.storyboard */,
 				CE693F4A2C03DA3400B77A20 /* Assets.xcassets */,
 				CE693F4C2C03DA3400B77A20 /* LaunchScreen.storyboard */,
@@ -150,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE64D52E2C04BB63006A14A7 /* RestaurantTableViewCell.xib in Resources */,
 				CE693F4B2C03DA3400B77A20 /* Assets.xcassets in Resources */,
 				CE693F4E2C03DA3400B77A20 /* Base in Resources */,
 				CE693F492C03DA3200B77A20 /* Base in Resources */,
@@ -323,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3CHY8M792C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Travel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -355,6 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3CHY8M792C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Travel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
