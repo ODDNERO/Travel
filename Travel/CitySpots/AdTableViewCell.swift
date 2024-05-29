@@ -14,11 +14,17 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet var adTitleLabel: UILabel!
     @IBOutlet var adButton: UIButton!
     
-    let randomAdViewColor = ["AdBlue", "AdGreen", "AdPink", "AdPurple", "AdYellow"].randomElement()!
+    var adViewColors = ["AdBlue", "AdGreen", "AdPink", "AdPurple", "AdYellow"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureAdUI()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        adView.backgroundColor = UIColor(named: adViewColors.randomElement()!)
     }
     
     func configureAdCell(data: CitySpot) {
@@ -27,7 +33,7 @@ class AdTableViewCell: UITableViewCell {
     }
     
     func configureAdUI() {
-        adView.backgroundColor = UIColor(named: randomAdViewColor)
+        adView.backgroundColor = UIColor(named: adViewColors.randomElement()!)
         adView.layer.cornerRadius = 10
         
         adTitleLabel.font = .boldSystemFont(ofSize: 17)

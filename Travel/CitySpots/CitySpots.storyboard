@@ -9,17 +9,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--City Spots View Controller-->
         <scene sceneID="x7e-a1-djr">
             <objects>
-                <viewController id="1Rm-fy-UNM" sceneMemberID="viewController">
+                <viewController id="1Rm-fy-UNM" customClass="CitySpotsViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYF-7V-qWs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PnQ-wK-0np">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y6X-SG-Med"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PnQ-wK-0np" firstAttribute="leading" secondItem="y6X-SG-Med" secondAttribute="leading" id="XPJ-Jv-ciE"/>
+                            <constraint firstItem="PnQ-wK-0np" firstAttribute="top" secondItem="y6X-SG-Med" secondAttribute="top" id="eOL-1c-kaL"/>
+                            <constraint firstItem="y6X-SG-Med" firstAttribute="bottom" secondItem="PnQ-wK-0np" secondAttribute="bottom" id="iH1-Ww-ROa"/>
+                            <constraint firstItem="y6X-SG-Med" firstAttribute="trailing" secondItem="PnQ-wK-0np" secondAttribute="trailing" id="wQe-yq-2bj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PiC-op-4ph"/>
+                    <connections>
+                        <outlet property="citySpotsTableView" destination="PnQ-wK-0np" id="jyb-LL-3oy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8x-Q5-6sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
