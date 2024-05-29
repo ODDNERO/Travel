@@ -11,7 +11,7 @@ import Kingfisher
 class CitySpotsViewController: UIViewController {
     @IBOutlet var citySpotsTableView: UITableView!
     
-    let citySpotList = CitySpotInfo.citySpotList
+    var citySpotList = CitySpotInfo.citySpotList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,15 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
             let citySpotCell = tableView.dequeueReusableCell(
                 withIdentifier: CitySpotsTableViewCell.identifier, for: indexPath) as! CitySpotsTableViewCell
             citySpotCell.configureSpotCell(data: data)
+            
+            citySpotCell.heartButton.tag = indexPath.row
+            citySpotCell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
             return citySpotCell
         }
+    }
+    
+    @objc func heartButtonClicked(sender: UIButton) {
+        citySpotList[sender.tag].like?.toggle()
+        citySpotsTableView.reloadData()
     }
 }

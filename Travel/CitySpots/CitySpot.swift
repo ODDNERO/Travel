@@ -12,7 +12,7 @@ struct CitySpot {
     let spotImage: String?
     let grade: Double?
     let save: Int?
-    let like: Bool?
+    var like: Bool?
     let ad: Bool
     var gradeAndSave: String {
         if let grade, let save {
@@ -37,21 +37,21 @@ enum CitySpotInfo {
                  spotImage: "https://images.unsplash.com/photo-1709380733305-e65f500ab1ac?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.9,
                  save: 5167,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "알라 모아나 센터",
                  description: "하와이 최고의 쇼핑 명소",
                  spotImage: "https://images.unsplash.com/photo-1600215754990-6e7946d1e37a?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 3.8,
                  save: 8262,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "와이키키 비치",
                  description: "세계적으로 유명한 하와이 최고의 해변",
                  spotImage: "https://images.unsplash.com/photo-1507876466758-bc54f384809c?q=80&w=3309&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.2,
                  save: 7892,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "하와이 여행을 가고 싶다면?",
                  description: nil,
@@ -72,7 +72,7 @@ enum CitySpotInfo {
                  spotImage: "https://images.unsplash.com/photo-1545580492-8859ba8323f0?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.7,
                  save: 26076,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "도쿄 타워",
                  description: "아름다운 전망을 즐길 수 있는 도쿄의 상징",
@@ -93,14 +93,14 @@ enum CitySpotInfo {
                  spotImage: "https://images.unsplash.com/photo-1501523460185-2aa5d2a0f981?q=80&w=3331&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.0,
                  save: 67696,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "제주 국제공항",
                  description: "면세점이 있어 더욱 사랑받는, 제주 여행의 시작과 끝을 함께하는 공항",
                  spotImage: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.8,
                  save: 18817,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "서귀포 매일 올레 시장",
                  description: "다양한 농수산물, 잡화, 먹거리를 판매하는 재래 시장",
@@ -114,7 +114,7 @@ enum CitySpotInfo {
                  spotImage: "https://images.unsplash.com/photo-1622209018972-097984086b0b?q=80&w=3279&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                  grade: 4.9,
                  save: 44507,
-                 like: true,
+                 like: false,
                  ad: false),
         CitySpot(title: "제주 비행기 최저가!",
                  description: nil,
