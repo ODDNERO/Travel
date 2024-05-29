@@ -19,19 +19,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEZ-Ae-Rfp">
-                        <rect key="frame" x="300" y="10" width="108" height="134"/>
+                        <rect key="frame" x="299.66666666666669" y="10" width="107.33333333333331" height="134"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="KEZ-Ae-Rfp" secondAttribute="height" multiplier="3.2:4" id="weQ-pl-BN7"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th2-R1-FUc">
-                        <rect key="frame" x="378" y="10" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="Th2-R1-FUc" secondAttribute="height" multiplier="1:1" id="Aua-Yt-eJu"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 디자인의 제품이 있는 고급 모자 전문 매장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjL-O4-Smg">
                         <rect key="frame" x="20" y="41" width="259.66666666666669" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -50,7 +42,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-en-fCr">
-                                <rect key="frame" x="15" y="0.0" width="15" height="14.999999999999977"/>
+                                <rect key="frame" x="15" y="-0.33333333333333215" width="15" height="14.666666666666666"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PP9-L2-Yra">
                                 <rect key="frame" x="30" y="-0.33333333333333215" width="15" height="14.666666666666666"/>
@@ -81,9 +73,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th2-R1-FUc">
+                        <rect key="frame" x="372" y="15" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="uJ4-uy-Yii"/>
+                            <constraint firstAttribute="height" constant="30" id="yYs-S8-FKv"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Th2-R1-FUc" firstAttribute="top" secondItem="KEZ-Ae-Rfp" secondAttribute="top" id="0Hq-eU-l5U"/>
                     <constraint firstItem="Sst-ND-6BE" firstAttribute="leading" secondItem="Rru-NZ-1t8" secondAttribute="trailing" constant="2" id="0Jd-w9-dNl"/>
                     <constraint firstItem="Rru-NZ-1t8" firstAttribute="top" secondItem="TjL-O4-Smg" secondAttribute="bottom" constant="5" id="Cxb-3a-g6f"/>
                     <constraint firstItem="TjL-O4-Smg" firstAttribute="top" secondItem="E6Q-Np-fqY" secondAttribute="bottom" constant="5" id="DcD-f9-Mnw"/>
@@ -91,10 +91,11 @@
                     <constraint firstItem="Rru-NZ-1t8" firstAttribute="leading" secondItem="tsR-ir-gQM" secondAttribute="leading" constant="20" symbolic="YES" id="Gnb-c6-9YP"/>
                     <constraint firstItem="KEZ-Ae-Rfp" firstAttribute="leading" secondItem="E6Q-Np-fqY" secondAttribute="trailing" constant="20" id="M4P-UY-NDh"/>
                     <constraint firstAttribute="trailing" secondItem="KEZ-Ae-Rfp" secondAttribute="trailing" constant="20" id="OnD-34-2vI"/>
+                    <constraint firstItem="KEZ-Ae-Rfp" firstAttribute="trailing" secondItem="Th2-R1-FUc" secondAttribute="trailing" constant="5" id="Sl1-4l-qq3"/>
                     <constraint firstItem="KEZ-Ae-Rfp" firstAttribute="top" secondItem="tsR-ir-gQM" secondAttribute="top" constant="10" id="TZe-eM-Mw8"/>
                     <constraint firstItem="E6Q-Np-fqY" firstAttribute="leading" secondItem="tsR-ir-gQM" secondAttribute="leading" constant="20" id="U7y-ZV-Lya"/>
+                    <constraint firstItem="Th2-R1-FUc" firstAttribute="top" secondItem="KEZ-Ae-Rfp" secondAttribute="top" constant="5" id="Uf0-d3-a04"/>
                     <constraint firstItem="E6Q-Np-fqY" firstAttribute="top" secondItem="tsR-ir-gQM" secondAttribute="top" constant="20" id="Yoy-2A-qjy"/>
-                    <constraint firstItem="Th2-R1-FUc" firstAttribute="trailing" secondItem="KEZ-Ae-Rfp" secondAttribute="trailing" id="d1V-1N-nep"/>
                     <constraint firstAttribute="bottom" secondItem="KEZ-Ae-Rfp" secondAttribute="bottom" constant="10" id="irH-3c-zga"/>
                     <constraint firstItem="KEZ-Ae-Rfp" firstAttribute="leading" secondItem="TjL-O4-Smg" secondAttribute="trailing" constant="20" id="jA7-TB-4cf"/>
                     <constraint firstItem="TjL-O4-Smg" firstAttribute="leading" secondItem="tsR-ir-gQM" secondAttribute="leading" constant="20" id="paV-kQ-AiL"/>

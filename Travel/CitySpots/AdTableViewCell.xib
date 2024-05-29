@@ -22,7 +22,7 @@
                         <rect key="frame" x="10" y="10" width="390" height="72"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2f-lH-YHl">
-                                <rect key="frame" x="352" y="8" width="30" height="20"/>
+                                <rect key="frame" x="355" y="5" width="30" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p2f-lH-YHl" secondAttribute="height" multiplier="3:2" id="WWI-2k-XRU"/>
                                     <constraint firstAttribute="width" constant="30" id="xee-v4-bUZ"/>
@@ -32,8 +32,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="p2f-lH-YHl" secondAttribute="trailing" constant="8" id="Eno-aN-ydf"/>
-                            <constraint firstItem="p2f-lH-YHl" firstAttribute="top" secondItem="KXv-Tt-zBW" secondAttribute="top" constant="8" id="o3V-b9-fxc"/>
+                            <constraint firstAttribute="trailing" secondItem="p2f-lH-YHl" secondAttribute="trailing" constant="5" id="Eno-aN-ydf"/>
+                            <constraint firstItem="p2f-lH-YHl" firstAttribute="top" secondItem="KXv-Tt-zBW" secondAttribute="top" constant="5" id="o3V-b9-fxc"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하와이 여행을 가고 싶다면?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEf-yN-Ivn">

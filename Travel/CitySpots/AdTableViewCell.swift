@@ -38,9 +38,12 @@ class AdTableViewCell: UITableViewCell {
         
         adTitleLabel.font = .boldSystemFont(ofSize: 17)
         adTitleLabel.textAlignment = .center
- 
+        
         adButton.setTitleColor(.black, for: .normal)
         adButton.backgroundColor = .white
-        adButton.layer.cornerRadius = 5
+        adButton.layer.cornerRadius = 8
+        adButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        adButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        adButton.titleLabel?.textAlignment = .center
     }
 }

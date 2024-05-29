@@ -50,7 +50,7 @@ enum UIImages {
 
 extension CitySpotsTableViewCell {
     func configureSpotUI() {
-        spotTitleLabel.font = .boldSystemFont(ofSize: 17)
+        spotTitleLabel.font = .systemFont(ofSize: 18, weight: .bold)
         spotTitleLabel.textColor = .black
         
         spotDescriptionLabel.font = .systemFont(ofSize: 15)
