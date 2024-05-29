@@ -12,7 +12,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var restaurantSearchBar: UISearchBar!
     @IBOutlet var restaurantTableView: UITableView!
     
-    let restaurantList = RestaurantInfo().restaurantList
+    let restaurantList = RestaurantInfo.restaurantList
     var filteredList: [Restaurant] = []
     
     override func viewDidLoad() {
