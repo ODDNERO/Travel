@@ -40,12 +40,13 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
             withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         
         let data = filteredList[indexPath.row]
-        cell.configureCell(data: data)
+        cell.configureRestaurantCell(data: data)
         
         return cell
     }
 }
 
+// MARK: - UI Setting
 extension RestaurantViewController {
     func configureBarView() {
         navigationItem.title = "식당 🔍"

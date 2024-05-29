@@ -14,7 +14,7 @@ struct CitySpot {
     let save: Int?
     let like: Bool?
     let ad: Bool
-    var titleDescription: String {
+    var gradeAndSave: String {
         if let grade, let save {
             return "\(grade) | 저장 \(save.formatted())"
         } else {
