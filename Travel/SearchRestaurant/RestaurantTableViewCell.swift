@@ -34,12 +34,16 @@ class RestaurantTableViewCell: UITableViewCell {
         restaurantAddressLabel.text = data.address
         restaurantPriceLabel.text = data.price.formatted() + "원"
         restaurantContactLabel.text = data.phoneNumber
+        
+        let heartImage = data.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
+        heartButton.setImage(heartImage, for: .normal)
     }
     
     func configureRestaurantUI() {
-        foodCategotyButton.backgroundColor = .red
-        foodCategotyButton.tintColor = .white
+        foodCategotyButton.backgroundColor = .adYellow
+        foodCategotyButton.tintColor = .red
         foodCategotyButton.layer.cornerRadius = 10
+        foodCategotyButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
         
         restaurantImageView.contentMode = .scaleAspectFill
         restaurantImageView.layer.cornerRadius = 15
@@ -54,5 +58,7 @@ class RestaurantTableViewCell: UITableViewCell {
         
         restaurantPriceLabel.font = .systemFont(ofSize: 13, weight: .regular)
         restaurantPriceLabel.textColor = .lightGray
+        
+        heartButton.tintColor = .heartPink
     }
 }

@@ -12,7 +12,7 @@ class RestaurantViewController: UIViewController {
     @IBOutlet var restaurantSearchBar: UISearchBar!
     @IBOutlet var restaurantTableView: UITableView!
     
-    let restaurantList = RestaurantInfo.restaurantList
+    var restaurantList = RestaurantInfo.restaurantList
     var filteredList: [Restaurant] = []
     
     override func viewDidLoad() {
@@ -46,7 +46,16 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
         let data = filteredList[indexPath.row]
         cell.configureRestaurantCell(data: data)
         
+        cell.heartButton.tag = indexPath.row
+        cell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func heartButtonClicked(sender: UIButton) {
+        restaurantList[sender.tag].like.toggle()
+        filteredList[sender.tag].like.toggle()
+        restaurantTableView.reloadData()
     }
 }
 

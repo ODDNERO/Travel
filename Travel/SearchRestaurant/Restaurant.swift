@@ -10,6 +10,7 @@ import Foundation
 
 struct Restaurant {    
     let image: String
+    var like: Bool = false
     let latitude: Double
     let longitude: Double
     let name: String

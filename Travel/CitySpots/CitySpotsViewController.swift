@@ -61,6 +61,7 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
             
             citySpotCell.heartButton.tag = indexPath.row
             citySpotCell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
+            
             return citySpotCell
         }
     }
