@@ -18,11 +18,11 @@ class RestaurantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewConfigure()
+        configureTableView()
         configureBarView()
     }
     
-    func tableViewConfigure() {
+    func configureTableView() {
         restaurantTableView.rowHeight = 150
         
         let xib = UINib(nibName: RestaurantTableViewCell.identifier, bundle: nil)
