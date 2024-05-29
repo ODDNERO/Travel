@@ -93,7 +93,16 @@
                         <viewLayoutGuide key="safeArea" id="zHu-2u-Tdc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rp0-0t-P67"/>
+                    <navigationItem key="navigationItem" id="Rp0-0t-P67">
+                        <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="vm0-7T-k9s">
+                            <connections>
+                                <action selector="closeButtonClicked:" destination="rYc-Dh-aBT" id="sP7-U7-AQW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="vm0-7T-k9s" id="IiH-Qq-gjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdU-lk-eCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +147,7 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

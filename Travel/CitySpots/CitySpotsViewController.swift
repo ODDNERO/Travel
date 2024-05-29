@@ -76,8 +76,9 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
         
         if data.ad == true {
             let adViewController = storyboard.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
-            navigationController?.modalPresentationStyle = .fullScreen
-            present(adViewController, animated: true, completion: nil)
+            let navigationController = UINavigationController(rootViewController: adViewController)
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true, completion: nil)
         } else {
             let spotViewController = storyboard.instantiateViewController(withIdentifier: SpotViewController.identifier) as! SpotViewController
             navigationController?.pushViewController(spotViewController, animated: true)
