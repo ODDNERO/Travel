@@ -69,4 +69,18 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
         citySpotList[sender.tag].like?.toggle()
         citySpotsTableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "CitySpots", bundle: nil)
+        let data = citySpotList[indexPath.row]
+        
+        if data.ad == true {
+            let adViewController = storyboard.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
+            navigationController?.modalPresentationStyle = .fullScreen
+            present(adViewController, animated: true, completion: nil)
+        } else {
+            let spotViewController = storyboard.instantiateViewController(withIdentifier: SpotViewController.identifier) as! SpotViewController
+            navigationController?.pushViewController(spotViewController, animated: true)
+        }
+    }
 }

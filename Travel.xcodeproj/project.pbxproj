@@ -16,6 +16,8 @@
 		CE55E9F52C064F7300F69397 /* CitySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55E9F42C064F7300F69397 /* CitySpot.swift */; };
 		CE55E9F82C0661A000F69397 /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE55E9F72C0661A000F69397 /* AdTableViewCell.xib */; };
 		CE55E9F92C0661A000F69397 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55E9F62C0661A000F69397 /* AdTableViewCell.swift */; };
+		CE55E9FB2C077A9100F69397 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55E9FA2C077A9100F69397 /* SpotViewController.swift */; };
+		CE55E9FD2C07819B00F69397 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55E9FC2C07819B00F69397 /* AdViewController.swift */; };
 		CE64D5252C04A858006A14A7 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5242C04A858006A14A7 /* DateFormatter+.swift */; };
 		CE64D5272C04AD92006A14A7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64D5262C04AD91006A14A7 /* Restaurant.swift */; };
 		CE64D52E2C04BB63006A14A7 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE64D52D2C04BB63006A14A7 /* RestaurantTableViewCell.xib */; };
@@ -42,6 +44,8 @@
 		CE55E9F42C064F7300F69397 /* CitySpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySpot.swift; sourceTree = "<group>"; };
 		CE55E9F62C0661A000F69397 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		CE55E9F72C0661A000F69397 /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
+		CE55E9FA2C077A9100F69397 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
+		CE55E9FC2C07819B00F69397 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		CE64D5242C04A858006A14A7 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		CE64D5262C04AD91006A14A7 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CE64D52C2C04BB63006A14A7 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			children = (
 				CE55E9F42C064F7300F69397 /* CitySpot.swift */,
 				CE55E9EE2C064D7B00F69397 /* CitySpotsViewController.swift */,
+				CE55E9FA2C077A9100F69397 /* SpotViewController.swift */,
+				CE55E9FC2C07819B00F69397 /* AdViewController.swift */,
 				CE55E9F02C064EB500F69397 /* CitySpotsTableViewCell.swift */,
 				CE55E9F62C0661A000F69397 /* AdTableViewCell.swift */,
 				CE55E9F12C064EB500F69397 /* CitySpotsTableViewCell.xib */,
@@ -246,6 +252,8 @@
 				CE55E9F52C064F7300F69397 /* CitySpot.swift in Sources */,
 				CE64D5272C04AD92006A14A7 /* Restaurant.swift in Sources */,
 				CE64D5312C04BBB0006A14A7 /* RestaurantViewController.swift in Sources */,
+				CE55E9FD2C07819B00F69397 /* AdViewController.swift in Sources */,
+				CE55E9FB2C077A9100F69397 /* SpotViewController.swift in Sources */,
 				CE55E9EF2C064D7B00F69397 /* CitySpotsViewController.swift in Sources */,
 				CE64D52F2C04BB63006A14A7 /* RestaurantTableViewCell.swift in Sources */,
 				CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */,

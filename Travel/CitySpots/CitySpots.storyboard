@@ -40,6 +40,92 @@
             </objects>
             <point key="canvasLocation" x="882" y="1219"/>
         </scene>
+        <!--Spot View Controller-->
+        <scene sceneID="bnP-hH-uVd">
+            <objects>
+                <viewController storyboardIdentifier="SpotViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tbl-dR-PaV" customClass="SpotViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nPe-Qr-Ibv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="관광지 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrC-ST-6cB">
+                                <rect key="frame" x="72" y="235" width="250" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gJb-w1-S1a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="za9-VO-lMw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGH-tf-dMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599.2366412213742" y="1217.605633802817"/>
+        </scene>
+        <!--Ad View Controller-->
+        <scene sceneID="Uyb-Xn-Ubk">
+            <objects>
+                <viewController storyboardIdentifier="AdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rYc-Dh-aBT" customClass="AdViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tqs-24-flK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="광고 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3V-2N-7dr">
+                                <rect key="frame" x="72" y="235" width="250" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zHu-2u-Tdc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rp0-0t-P67"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EdU-lk-eCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="1925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fuy-no-fPB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y4P-xr-KMX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MLp-DJ-Y7L">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tbl-dR-PaV" kind="relationship" relationship="rootViewController" id="PBC-qq-2gb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iip-3A-3Z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.5190839694656" y="1217.605633802817"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZsQ-Y7-HE9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b48-BS-NUH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o8U-ax-zPF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rYc-Dh-aBT" kind="relationship" relationship="rootViewController" id="IEK-b5-yfu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xh2-xd-hp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="1925"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
