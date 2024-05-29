@@ -59,7 +59,16 @@
                         <viewLayoutGuide key="safeArea" id="gJb-w1-S1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="za9-VO-lMw"/>
+                    <navigationItem key="navigationItem" id="za9-VO-lMw">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="CUl-dL-ST2">
+                            <connections>
+                                <action selector="backButtonClicked:" destination="tbl-dR-PaV" id="0uJ-EO-fWy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="CUl-dL-ST2" id="soB-99-tL5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGH-tf-dMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +137,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
