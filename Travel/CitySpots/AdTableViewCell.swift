@@ -16,10 +16,15 @@ class AdTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureCellStyle()
+        configureAdUI()
     }
     
-    func configureCellStyle() {
+    func configureAdCell(data: CitySpot) {
+        adTitleLabel.text = data.title
+        adButton.setTitle("AD", for: .normal)
+    }
+    
+    func configureAdUI() {
         adView.backgroundColor = UIColor(named: randomAdViewColor)
         adView.layer.cornerRadius = 10
         
@@ -29,10 +34,5 @@ class AdTableViewCell: UITableViewCell {
         adButton.setTitleColor(.black, for: .normal)
         adButton.backgroundColor = .white
         adButton.layer.cornerRadius = 5
-    }
-    
-    func configureCell(data: CitySpot) {
-        adTitleLabel.text = data.title
-        adButton.setTitle("AD", for: .normal)
     }
 }

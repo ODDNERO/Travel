@@ -20,10 +20,22 @@ class RestaurantTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureCellStyle()
+        configureRestaurantUI()
     }
     
-    func configureCellStyle() {
+    func configureRestaurantCell(data: Restaurant) {
+        let cellImage: String = data.image
+        let cellImageURL = URL(string: cellImage)
+        restaurantImageView.kf.setImage(with: cellImageURL)
+        
+        foodCategotyButton.setTitle(data.category, for: .normal)
+        restaurantNameLabel.text = data.name
+        restaurantAddressLabel.text = data.address
+        restaurantPriceLabel.text = data.price.formatted() + "원"
+        restaurantContactLabel.text = data.phoneNumber
+    }
+    
+    func configureRestaurantUI() {
         foodCategotyButton.backgroundColor = .red
         foodCategotyButton.tintColor = .white
         foodCategotyButton.layer.cornerRadius = 10
@@ -41,17 +53,5 @@ class RestaurantTableViewCell: UITableViewCell {
         
         restaurantPriceLabel.font = .systemFont(ofSize: 13, weight: .regular)
         restaurantPriceLabel.textColor = .lightGray
-    }
-    
-    func configureCell(data: Restaurant) {
-        let cellImage: String = data.image
-        let cellImageURL = URL(string: cellImage)
-        restaurantImageView.kf.setImage(with: cellImageURL)
-        
-        foodCategotyButton.setTitle(data.category, for: .normal)
-        restaurantNameLabel.text = data.name
-        restaurantAddressLabel.text = data.address
-        restaurantPriceLabel.text = data.price.formatted() + "원"
-        restaurantContactLabel.text = data.phoneNumber
     }
 }
