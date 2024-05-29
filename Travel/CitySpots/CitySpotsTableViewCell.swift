@@ -13,13 +13,30 @@ class CitySpotsTableViewCell: UITableViewCell {
     @IBOutlet var spotTitleLabel: UILabel!
     @IBOutlet var spotDescriptionLabel: UILabel!
     @IBOutlet var starImageViewList: [UIImageView]!
-    @IBOutlet var spotTitleDescriptionLabel: UILabel!
+    @IBOutlet var spotGradeAndSaveLabel: UILabel!
     @IBOutlet var heartButton: UIButton!
     @IBOutlet var spotImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureSpotUI()
+    }
+    
+    func configureSpotCell(data: CitySpot) {
+        spotTitleLabel.text = data.title
+        spotDescriptionLabel.text = data.description
+        spotGradeAndSaveLabel.text = data.gradeAndSave
+        
+        let spotGrade = data.grade
+        //grade에 따른 starImageView 설정 필요
+        
+        let heartImage = data.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
+        heartButton.setImage(heartImage, for: .normal)
+        
+        if let spotImage = data.spotImage {
+            let spotImageURL = URL(string: spotImage)
+            spotImageView.kf.setImage(with: spotImageURL)
+        }
     }
 }
 
@@ -46,8 +63,8 @@ extension CitySpotsTableViewCell {
             grade.tintColor = .systemGray5
         }
         
-        spotTitleDescriptionLabel.textColor = .lightGray
-        spotTitleDescriptionLabel.font = .systemFont(ofSize: 14)
+        spotGradeAndSaveLabel.textColor = .lightGray
+        spotGradeAndSaveLabel.font = .systemFont(ofSize: 14)
         
         spotImageView.contentMode = .scaleAspectFill
         spotImageView.layer.cornerRadius = 8

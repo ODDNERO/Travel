@@ -103,10 +103,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="Yas-RA-C3S"/>
             <connections>
-                <outlet property="descriptionLabel" destination="TjL-O4-Smg" id="Jr6-m0-7M4"/>
-                <outlet property="detailImageView" destination="KEZ-Ae-Rfp" id="udB-hn-TrR"/>
                 <outlet property="heartButton" destination="Th2-R1-FUc" id="DIw-Ud-Rz1"/>
-                <outlet property="likeButton" destination="Th2-R1-FUc" id="IRE-TG-gN2"/>
                 <outlet property="spotDescriptionLabel" destination="TjL-O4-Smg" id="58O-Zk-wjn"/>
                 <outlet property="spotGradeAndSaveLabel" destination="Sst-ND-6BE" id="2nE-1f-UPv"/>
                 <outlet property="spotImageView" destination="KEZ-Ae-Rfp" id="Xuz-RH-SLJ"/>

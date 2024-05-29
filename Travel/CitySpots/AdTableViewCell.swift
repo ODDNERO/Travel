@@ -8,6 +8,8 @@
 import UIKit
 
 class AdTableViewCell: UITableViewCell {
+    static let identifier = "AdTableViewCell"
+    
     @IBOutlet var adView: UIView!
     @IBOutlet var adTitleLabel: UILabel!
     @IBOutlet var adButton: UIButton!

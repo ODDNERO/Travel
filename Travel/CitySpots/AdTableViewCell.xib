@@ -55,12 +55,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="fFO-0C-chj"/>
             <connections>
-                <outlet property="adBadgeButton" destination="p2f-lH-YHl" id="OJv-8h-rEK"/>
-                <outlet property="adButton" destination="p2f-lH-YHl" id="iwT-K4-Z6m"/>
-                <outlet property="adLabel" destination="IEf-yN-Ivn" id="fGk-te-Lkd"/>
-                <outlet property="adTitleLabel" destination="IEf-yN-Ivn" id="rF9-Ng-8YM"/>
-                <outlet property="adView" destination="KXv-Tt-zBW" id="b6A-36-2Uw"/>
-                <outlet property="backgoundColorView" destination="KXv-Tt-zBW" id="8i3-qX-zeD"/>
+                <outlet property="adButton" destination="p2f-lH-YHl" id="w0h-6v-Rmj"/>
+                <outlet property="adTitleLabel" destination="IEf-yN-Ivn" id="UmR-UR-euB"/>
+                <outlet property="adView" destination="KXv-Tt-zBW" id="9Ni-NX-ZSA"/>
             </connections>
             <point key="canvasLocation" x="141.98473282442748" y="-11.267605633802818"/>
         </tableViewCell>
