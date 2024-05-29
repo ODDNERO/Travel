@@ -12,8 +12,27 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet var adTitleLabel: UILabel!
     @IBOutlet var adButton: UIButton!
     
+    let randomAdViewColor = ["AdBlue", "AdGreen", "AdPink", "AdPurple", "AdYellow"].randomElement()!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureCellStyle()
+    }
+    
+    func configureCellStyle() {
+        adView.backgroundColor = UIColor(named: randomAdViewColor)
+        adView.layer.cornerRadius = 10
+        
+        adTitleLabel.font = .boldSystemFont(ofSize: 17)
+        adTitleLabel.textAlignment = .center
+ 
+        adButton.setTitleColor(.black, for: .normal)
+        adButton.backgroundColor = .white
+        adButton.layer.cornerRadius = 5
+    }
+    
+    func configureCell(data: CitySpot) {
+        adTitleLabel.text = data.title
+        adButton.setTitle("AD", for: .normal)
     }
 }
