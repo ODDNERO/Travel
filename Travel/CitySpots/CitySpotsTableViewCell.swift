@@ -19,6 +19,7 @@ class CitySpotsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         configureSpotUI()
     }
     

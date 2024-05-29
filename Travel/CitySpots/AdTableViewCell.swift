@@ -18,12 +18,12 @@ class AdTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         configureAdUI()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         adView.backgroundColor = UIColor(named: adViewColors.randomElement()!)
     }
     

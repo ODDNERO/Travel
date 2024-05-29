@@ -15,6 +15,7 @@ class TravelMagazineTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         configureCellStyle()
     }
     
