@@ -39,17 +39,7 @@ class CitySpotsTableViewCell: UITableViewCell {
             spotImageView.kf.setImage(with: spotImageURL)
         }
     }
-}
-
-//MARK: - UI Setting
-enum UIImages {
-    static let fillHeartImage = UIImage(systemName: "heart.fill")
-    static let emptyHeartImage = UIImage(systemName: "heart")
-    static let halfStarImage = UIImage(systemName: "star.leadinghalf.filled")
-    static let fillStarImage = UIImage(systemName: "star.fill")
-}
-
-extension CitySpotsTableViewCell {
+    
     func configureSpotUI() {
         spotTitleLabel.font = .systemFont(ofSize: 18, weight: .bold)
         spotTitleLabel.textColor = .black

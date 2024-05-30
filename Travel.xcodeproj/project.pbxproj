@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE127B2B2C08EE580062EA2A /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE127B2A2C08EE580062EA2A /* UIImages.swift */; };
 		CE55E9E82C0642ED00F69397 /* TravelMagazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE55E9E72C0642ED00F69397 /* TravelMagazine.storyboard */; };
 		CE55E9EA2C0642FD00F69397 /* SearchRestaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE55E9E92C0642FD00F69397 /* SearchRestaurant.storyboard */; };
 		CE55E9ED2C06446B00F69397 /* CitySpots.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE55E9EC2C06446A00F69397 /* CitySpots.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE127B2A2C08EE580062EA2A /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
 		CE55E9E72C0642ED00F69397 /* TravelMagazine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelMagazine.storyboard; sourceTree = "<group>"; };
 		CE55E9E92C0642FD00F69397 /* SearchRestaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchRestaurant.storyboard; sourceTree = "<group>"; };
 		CE55E9EC2C06446A00F69397 /* CitySpots.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySpots.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				CE55E9E22C05FF4300F69397 /* TravelMagazine */,
 				CE55E9E32C06117600F69397 /* SearchRestaurant */,
 				CE55E9EB2C06444300F69397 /* CitySpots */,
+				CE127B2A2C08EE580062EA2A /* UIImages.swift */,
 				CE693F472C03DA3200B77A20 /* Main.storyboard */,
 				CE693F4A2C03DA3400B77A20 /* Assets.xcassets */,
 				CE693F4C2C03DA3400B77A20 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 				CE693F422C03DA3200B77A20 /* AppDelegate.swift in Sources */,
 				CE55E9F92C0661A000F69397 /* AdTableViewCell.swift in Sources */,
 				CE693F442C03DA3200B77A20 /* SceneDelegate.swift in Sources */,
+				CE127B2B2C08EE580062EA2A /* UIImages.swift in Sources */,
 				CE55E9F32C064EB500F69397 /* CitySpotsTableViewCell.swift in Sources */,
 				CE693F5B2C03E58A00B77A20 /* TravelMagazineTableViewController.swift in Sources */,
 			);

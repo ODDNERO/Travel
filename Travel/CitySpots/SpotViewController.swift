@@ -78,18 +78,18 @@ class SpotViewController: UIViewController {
     
     func configureButtonUI() {
         backButton.tintColor = .red
-        backButton.image = .init(systemName: "chevron.backward")
+        backButton.image = UIImages.backwardImage
         
         reviewButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         reviewButton.titleLabel?.textColor = .systemIndigo
         
         moreReviewsButton.tintColor = .adBlue
-        moreReviewsButton.imageView?.image = .init(systemName: "chevron.forward")
+        moreReviewsButton.setImage(UIImages.forwardImage, for: .normal)
         
         heartButton.setImage(UIImages.fillHeartImage, for: .normal)
         heartButton.tintColor = .heartPink
         
-        shareButton.setImage(.init(systemName: "square.and.arrow.up"), for: .normal)
+        shareButton.setImage(UIImages.shareImage, for: .normal)
         shareButton.tintColor = .adPurple
     }
 }

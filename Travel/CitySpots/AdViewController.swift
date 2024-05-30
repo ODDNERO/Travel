@@ -25,6 +25,6 @@ class AdViewController: UIViewController {
     func configureBarUI() {
         navigationItem.title = "광고 화면"
         closeButton.tintColor = .red
-        closeButton.image = .init(systemName: "xmark")
+        closeButton.image = UIImages.xmarkImage
     }
 }
