@@ -29,6 +29,8 @@ class SpotViewController: UIViewController {
         super.viewDidLoad()
         
         configureData()
+        configureUI()
+        configureButtonUI()
     }
     
     @IBAction func backButtonClicked(_ sender: UIBarButtonItem) {
@@ -49,5 +51,45 @@ class SpotViewController: UIViewController {
         
         let heartImage = data?.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
         heartButton.setImage(heartImage, for: .normal)
+    }
+    
+    func configureUI() {
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 20
+        
+        descriptionLabel.textColor = .systemGray
+        descriptionLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        descriptionLabel.numberOfLines = 0
+        
+        bottomView.backgroundColor = .systemGray6
+        for borderView in [bottomView, reviewView] {
+            borderView!.layer.cornerRadius = 18
+            borderView!.layer.borderColor = UIColor(named: "AdBlue")?.cgColor
+            borderView!.layer.borderWidth = 1.5
+        }
+        
+        starImage.image = UIImages.fillStarImage
+        starImage.tintColor = .systemYellow
+        
+        gradeLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        gradeLabel.textColor = .systemGray2
+        
+    }
+    
+    func configureButtonUI() {
+        backButton.tintColor = .red
+        backButton.image = .init(systemName: "chevron.backward")
+        
+        reviewButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        reviewButton.titleLabel?.textColor = .systemIndigo
+        
+        moreReviewsButton.tintColor = .adBlue
+        moreReviewsButton.imageView?.image = .init(systemName: "chevron.forward")
+        
+        heartButton.setImage(UIImages.fillHeartImage, for: .normal)
+        heartButton.tintColor = .heartPink
+        
+        shareButton.setImage(.init(systemName: "square.and.arrow.up"), for: .normal)
+        shareButton.tintColor = .adPurple
     }
 }
