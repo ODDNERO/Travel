@@ -213,12 +213,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adTitleLabel" destination="pG7-jd-Pev" id="7P6-Rm-eUE"/>
+                        <outlet property="arrowLabel" destination="L71-wm-l17" id="d3d-hX-Wbt"/>
+                        <outlet property="backgroundView" destination="gah-C5-8xG" id="h5f-og-QG1"/>
                         <outlet property="closeButton" destination="vm0-7T-k9s" id="IiH-Qq-gjA"/>
+                        <outlet property="hurryUpButton" destination="Gu7-y9-W6w" id="5KC-FU-lFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdU-lk-eCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="1925"/>
+            <point key="canvasLocation" x="2597.709923664122" y="1924.6478873239437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fuy-no-fPB">

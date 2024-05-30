@@ -77,9 +77,13 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
         
         if data.ad == true {
             let adViewController = storyboard.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
+            adViewController.data = citySpotList[indexPath.row]
+            adViewController.cell = tableView.cellForRow(at: indexPath) as? AdTableViewCell
+            
             let navigationController = UINavigationController(rootViewController: adViewController)
             navigationController.modalPresentationStyle = .fullScreen
             present(navigationController, animated: true, completion: nil)
+            
         } else {
             let spotViewController = storyboard.instantiateViewController(withIdentifier: SpotViewController.identifier) as! SpotViewController
             spotViewController.data = citySpotList[indexPath.row]

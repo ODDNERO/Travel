@@ -10,21 +10,23 @@ import UIKit
 class AdViewController: UIViewController {
     static let identifier = "AdViewController"
     
+    @IBOutlet var backgroundView: UIView!
     @IBOutlet var closeButton: UIBarButtonItem!
+    
+    @IBOutlet var adTitleLabel: UILabel!
+    @IBOutlet var arrowLabel: UILabel!
+    @IBOutlet var hurryUpButton: UIButton!
+    
+    var data: CitySpot?
+    var cell: AdTableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureBarUI()
+        adTitleLabel.text = data?.title
     }
     
     @IBAction func closeButtonClicked(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func configureBarUI() {
-        navigationItem.title = "광고 화면"
-        closeButton.tintColor = .red
-        closeButton.image = UIImages.xmarkImage
     }
 }
