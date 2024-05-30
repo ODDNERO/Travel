@@ -82,6 +82,8 @@ extension CitySpotsViewController: UITableViewDelegate, UITableViewDataSource {
             present(navigationController, animated: true, completion: nil)
         } else {
             let spotViewController = storyboard.instantiateViewController(withIdentifier: SpotViewController.identifier) as! SpotViewController
+            spotViewController.data = citySpotList[indexPath.row]
+            
             navigationController?.pushViewController(spotViewController, animated: true)
         }
     }
