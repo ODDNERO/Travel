@@ -23,10 +23,34 @@ class AdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        adTitleLabel.text = data?.title
+        configureUI()
     }
     
     @IBAction func closeButtonClicked(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func configureUI() {
+        adTitleLabel.text = data?.title
+        closeButton.tintColor = .systemIndigo
+        closeButton.image = UIImages.xmarkImage
+        
+        backgroundView.backgroundColor = cell?.adView.backgroundColor
+        
+        adTitleLabel.backgroundColor = .white
+        adTitleLabel.layer.cornerRadius = 15
+        adTitleLabel.clipsToBounds = true
+        adTitleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        adTitleLabel.textAlignment = .center
+        adTitleLabel.textColor = .black
+        
+        arrowLabel.text = "⬇️⬇️⬇️⬇️⬇️"
+        arrowLabel.font = .boldSystemFont(ofSize: 30)
+        arrowLabel.textAlignment = .center
+        
+        hurryUpButton.setTitle("서두르세요!!", for: .normal)
+        hurryUpButton.setTitleColor(.red, for: .normal)
+        hurryUpButton.setTitleColor(.blue, for: .highlighted)
+        hurryUpButton.titleLabel?.font = .systemFont(ofSize: 40, weight: .heavy)
     }
 }
