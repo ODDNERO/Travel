@@ -60,6 +60,23 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension RestaurantViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        var searchList: [Restaurant] = []
+        
+        for restaurant in restaurantList {
+            if restaurant.name.contains(searchBar.text!) || restaurant.category.contains(searchBar.text!) {
+                searchList.append(restaurant)
+            }
+        }
+        
+        filteredList = searchList
+        restaurantTableView.reloadData()
+        
+        if searchList.isEmpty {
+            presentAlert(title: "⚠️", message: "식당이 검색되지 않았어요", closeButton: "🆇")
+        }
+    }
+    
     func configureBarView() {
         navigationItem.title = "식당 🔍"
         
