@@ -157,8 +157,53 @@
                     <view key="view" contentMode="scaleToFill" id="tqs-24-flK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gah-C5-8xG">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⬇️⬇️⬇️⬇️⬇️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L71-wm-l17">
+                                        <rect key="frame" x="111.66666666666669" y="274" width="170" height="304"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-y9-W6w">
+                                        <rect key="frame" x="95.666666666666686" y="588" width="202" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="서두르세요!!"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하와이 여행을 가고 싶다면?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG7-jd-Pev">
+                                        <rect key="frame" x="74" y="160" width="245" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="106" id="FKQ-Ix-az0"/>
+                                            <constraint firstAttribute="width" constant="245" id="xjc-oK-nP5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gu7-y9-W6w" firstAttribute="centerX" secondItem="gah-C5-8xG" secondAttribute="centerX" id="JDd-Br-b4a"/>
+                                    <constraint firstItem="Gu7-y9-W6w" firstAttribute="top" secondItem="L71-wm-l17" secondAttribute="bottom" constant="10" id="YoQ-Oh-uRo"/>
+                                    <constraint firstItem="pG7-jd-Pev" firstAttribute="centerX" secondItem="gah-C5-8xG" secondAttribute="centerX" id="bR1-AY-yoN"/>
+                                    <constraint firstItem="L71-wm-l17" firstAttribute="centerY" secondItem="gah-C5-8xG" secondAttribute="centerY" id="boO-DC-Q7Q"/>
+                                    <constraint firstItem="L71-wm-l17" firstAttribute="centerX" secondItem="gah-C5-8xG" secondAttribute="centerX" id="csO-xs-vLJ"/>
+                                    <constraint firstItem="pG7-jd-Pev" firstAttribute="top" secondItem="gah-C5-8xG" secondAttribute="top" constant="160" id="fyc-ok-UCh"/>
+                                    <constraint firstItem="L71-wm-l17" firstAttribute="top" secondItem="pG7-jd-Pev" secondAttribute="bottom" constant="8" symbolic="YES" id="vHZ-oO-QwK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zHu-2u-Tdc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gah-C5-8xG" secondAttribute="bottom" id="91X-IO-vqD"/>
+                            <constraint firstAttribute="trailing" secondItem="gah-C5-8xG" secondAttribute="trailing" id="TXd-Lw-fVq"/>
+                            <constraint firstItem="gah-C5-8xG" firstAttribute="leading" secondItem="tqs-24-flK" secondAttribute="leading" id="YFR-RB-i6K"/>
+                            <constraint firstItem="gah-C5-8xG" firstAttribute="top" secondItem="tqs-24-flK" secondAttribute="top" id="hym-32-OzH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rp0-0t-P67">
                         <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="vm0-7T-k9s">
