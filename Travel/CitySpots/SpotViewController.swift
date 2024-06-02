@@ -8,8 +8,6 @@
 import UIKit
 
 class SpotViewController: UIViewController {
-    static let identifier = "SpotViewController"
-    
     @IBOutlet var backButton: UIBarButtonItem!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!

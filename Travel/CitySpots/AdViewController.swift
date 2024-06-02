@@ -8,8 +8,6 @@
 import UIKit
 
 class AdViewController: UIViewController {
-    static let identifier = "AdViewController"
-    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var closeButton: UIBarButtonItem!
     

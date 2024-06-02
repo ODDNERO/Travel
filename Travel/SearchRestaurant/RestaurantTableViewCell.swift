@@ -8,8 +8,6 @@
 import UIKit
 
 class RestaurantTableViewCell: UITableViewCell {
-    static let identifier = "RestaurantTableViewCell"
-    
     @IBOutlet var foodCategotyButton: UIButton!
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var restaurantNameLabel: UILabel!

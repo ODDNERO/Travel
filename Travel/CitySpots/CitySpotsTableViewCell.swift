@@ -8,8 +8,6 @@
 import UIKit
 
 class CitySpotsTableViewCell: UITableViewCell {
-    static let identifier = "CitySpotsTableViewCell"
-    
     @IBOutlet var spotTitleLabel: UILabel!
     @IBOutlet var spotDescriptionLabel: UILabel!
     @IBOutlet var starImageViewList: [UIImageView]!
