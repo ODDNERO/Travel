@@ -13,9 +13,13 @@ class RestaurantViewController: UIViewController {
     @IBOutlet var restaurantTableView: UITableView!
     
     var restaurantList = RestaurantInfo.restaurantList
-    var filteredList: [Restaurant] = []
-    
-    override func viewDidLoad() {
+    var filteredList: [Restaurant] = [] {
+        didSet {
+            restaurantTableView.reloadData()
+        }
+    }
+
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
@@ -55,7 +59,6 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
     @objc func heartButtonClicked(sender: UIButton) {
         restaurantList[sender.tag].like.toggle()
         filteredList[sender.tag].like.toggle()
-        restaurantTableView.reloadData()
     }
 }
 
@@ -68,9 +71,7 @@ extension RestaurantViewController: UISearchBarDelegate {
                 searchList.append(restaurant)
             }
         }
-        
         filteredList = searchList
-        restaurantTableView.reloadData()
         
         if searchList.isEmpty {
             presentAlert(title: "⚠️", message: "식당이 검색되지 않았어요", closeButton: "🆇")
@@ -98,11 +99,9 @@ extension RestaurantViewController: UISearchBarDelegate {
         }
         
         filteredList = koreanFood
-        restaurantTableView.reloadData()
     }
     
     @objc func allFoodButtonClicked() {
         filteredList = restaurantList
-        restaurantTableView.reloadData()
     }
 }
