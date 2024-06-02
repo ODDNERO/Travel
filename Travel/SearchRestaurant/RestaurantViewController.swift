@@ -12,14 +12,16 @@ class RestaurantViewController: UIViewController {
     @IBOutlet var restaurantSearchBar: UISearchBar!
     @IBOutlet var restaurantTableView: UITableView!
     
+    let pickerView = UIPickerView()
+    let categoryList = ["한식", "카페", "중식", "분식", "일식", "경양식", "양식"]
     var restaurantList = RestaurantInfo.restaurantList
     var filteredList: [Restaurant] = [] {
         didSet {
             restaurantTableView.reloadData()
         }
     }
-
-        override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
@@ -81,27 +83,25 @@ extension RestaurantViewController: UISearchBarDelegate {
     func configureBarView() {
         navigationItem.title = "식당 🔍"
         
-        let koreanFood = UIBarButtonItem(title: "한식", style: .plain, target: self, action: #selector(koreanFoodButtonClicked))
-        koreanFood.tintColor = .red
         
-        let allFood = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allFoodButtonClicked))
-        navigationItem.leftBarButtonItems = [koreanFood, allFood]
-        allFood.tintColor = .black
+    }
+}
+
+
+extension RestaurantViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    @objc func koreanFoodButtonClicked() {
-        var koreanFood: [Restaurant] = []
-        
-        for restaurant in restaurantList {
-            if restaurant.category == "한식" {
-                koreanFood.append(restaurant)
-            }
-        }
-        
-        filteredList = koreanFood
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoryList.count
     }
     
-    @objc func allFoodButtonClicked() {
-        filteredList = restaurantList
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categoryList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
 }
