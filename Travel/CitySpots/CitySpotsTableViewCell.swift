@@ -29,7 +29,7 @@ class CitySpotsTableViewCell: UITableViewCell {
         let spotGrade = data.grade
         //grade에 따른 starImageView 설정 필요
         
-        let heartImage = data.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
+        let heartImage = data.like == true ? UIImages.fillHeart : UIImages.emptyHeart
         heartButton.setImage(heartImage, for: .normal)
         
         if let spotImage = data.spotImage {
@@ -48,7 +48,7 @@ class CitySpotsTableViewCell: UITableViewCell {
         spotDescriptionLabel.numberOfLines = 0
         
         for grade in starImageViewList {
-            grade.image = UIImages.fillStarImage
+            grade.image = UIImages.fillStar
             grade.tintColor = .systemGray5
         }
         

@@ -31,7 +31,7 @@ class AdViewController: UIViewController {
     func configureUI() {
         adTitleLabel.text = data?.title
         closeButton.tintColor = .systemIndigo
-        closeButton.image = UIImages.xmarkImage
+        closeButton.image = UIImages.xmark
         
         backgroundView.backgroundColor = cell?.adView.backgroundColor
         

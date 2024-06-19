@@ -33,7 +33,7 @@ class RestaurantTableViewCell: UITableViewCell {
         restaurantPriceLabel.text = data.price.formatted() + "원"
         restaurantContactLabel.text = data.phoneNumber
         
-        let heartImage = data.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
+        let heartImage = data.like == true ? UIImages.fillHeart : UIImages.emptyHeart
         heartButton.setImage(heartImage, for: .normal)
     }
     

@@ -47,7 +47,7 @@ class SpotViewController: UIViewController {
             gradeLabel.text = String(grade)
         }
         
-        let heartImage = data?.like == true ? UIImages.fillHeartImage : UIImages.emptyHeartImage
+        let heartImage = data?.like == true ? UIImages.fillHeart : UIImages.emptyHeart
         heartButton.setImage(heartImage, for: .normal)
     }
     
@@ -66,7 +66,7 @@ class SpotViewController: UIViewController {
             borderView!.layer.borderWidth = 1.5
         }
         
-        starImage.image = UIImages.fillStarImage
+        starImage.image = UIImages.fillStar
         starImage.tintColor = .systemYellow
         
         gradeLabel.font = .systemFont(ofSize: 13, weight: .regular)
@@ -76,18 +76,18 @@ class SpotViewController: UIViewController {
     
     func configureButtonUI() {
         backButton.tintColor = .red
-        backButton.image = UIImages.backwardImage
+        backButton.image = UIImages.backward
         
         reviewButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         reviewButton.titleLabel?.textColor = .systemIndigo
         
         moreReviewsButton.tintColor = .adBlue
-        moreReviewsButton.setImage(UIImages.forwardImage, for: .normal)
+        moreReviewsButton.setImage(UIImages.forward, for: .normal)
         
-        heartButton.setImage(UIImages.fillHeartImage, for: .normal)
+        heartButton.setImage(UIImages.fillHeart, for: .normal)
         heartButton.tintColor = .heartPink
         
-        shareButton.setImage(UIImages.shareImage, for: .normal)
+        shareButton.setImage(UIImages.share, for: .normal)
         shareButton.tintColor = .adPurple
     }
 }
