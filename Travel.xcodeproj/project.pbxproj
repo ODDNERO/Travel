@@ -36,6 +36,7 @@
 		CE693F5B2C03E58A00B77A20 /* TravelMagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */; };
 		CE693F5D2C03E67A00B77A20 /* TravelMagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */; };
 		CE8CEE8F2C22EACF001BE6BA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8CEE8E2C22EACF001BE6BA /* SnapKit */; };
+		CE8CEE912C2304C3001BE6BA /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CEE902C2304C3001BE6BA /* RestaurantMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		CE693F552C03DE8900B77A20 /* Magazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
 		CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineTableViewController.swift; sourceTree = "<group>"; };
 		CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineTableViewCell.swift; sourceTree = "<group>"; };
+		CE8CEE902C2304C3001BE6BA /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CE64D52C2C04BB63006A14A7 /* RestaurantTableViewCell.swift */,
 				CE64D52D2C04BB63006A14A7 /* RestaurantTableViewCell.xib */,
 				CE55E9E92C0642FD00F69397 /* SearchRestaurant.storyboard */,
+				CE8CEE902C2304C3001BE6BA /* RestaurantMapViewController.swift */,
 			);
 			path = SearchRestaurant;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				CE64D5312C04BBB0006A14A7 /* RestaurantViewController.swift in Sources */,
 				CE55E9FD2C07819B00F69397 /* AdViewController.swift in Sources */,
 				CE55E9FB2C077A9100F69397 /* SpotViewController.swift in Sources */,
+				CE8CEE912C2304C3001BE6BA /* RestaurantMapViewController.swift in Sources */,
 				CE55E9EF2C064D7B00F69397 /* CitySpotsViewController.swift in Sources */,
 				CE64D52F2C04BB63006A14A7 /* RestaurantTableViewCell.swift in Sources */,
 				CE55EA0A2C086E8000F69397 /* UIViewController+.swift in Sources */,

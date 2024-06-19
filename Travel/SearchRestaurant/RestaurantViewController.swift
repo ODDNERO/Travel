@@ -12,8 +12,8 @@ import SnapKit
 class RestaurantViewController: UIViewController {
     @IBOutlet var restaurantSearchBar: UISearchBar!
     @IBOutlet var restaurantTableView: UITableView!
-    
     let pickerView = UIPickerView()
+    
     let categoryList = ["한식", "카페", "중식", "분식", "일식", "경양식", "양식"]
     var restaurantList = RestaurantInfo.restaurantList
     var filteredList: [Restaurant] = [] {
@@ -48,11 +48,16 @@ extension RestaurantViewController: UISearchBarDelegate {
     
     func configureBarView() {
         navigationItem.title = "식당 🔍"
+        
         let allFood = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allFoodButtonClicked))
-        allFood.tintColor = .black
         let category = UIBarButtonItem(title: "분류", style: .plain, target: self, action: #selector(categoryButtonClicked))
+        allFood.tintColor = .black
         category.tintColor = .red
         navigationItem.leftBarButtonItems = [allFood, category]
+        
+        let map = UIBarButtonItem(image: UIImages.map, style: .plain, target: self, action: #selector(mapButtonClicked))
+        map.tintColor = .map
+        navigationItem.rightBarButtonItem = map
         
         restaurantSearchBar.delegate = self
     }
@@ -65,6 +70,10 @@ extension RestaurantViewController: UISearchBarDelegate {
     
     @objc func categoryButtonClicked() {
         configureCategoryPicker()
+    }
+    
+    @objc func mapButtonClicked() {
+        navigationController?.pushViewController(RestaurantMapViewController(), animated: true)
     }
 }
 

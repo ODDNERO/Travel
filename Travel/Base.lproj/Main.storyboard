@@ -70,7 +70,7 @@
         <scene sceneID="bIJ-Ge-ZHn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ldv-P4-Uh4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="City Spots" image="map.fill" catalog="system" id="HKf-6z-YOS"/>
+                    <tabBarItem key="tabBarItem" title="City Spots" image="airplane" catalog="system" id="HKf-6z-YOS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n8M-DM-N8k">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -101,6 +101,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BB7-ao-Q1P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cho-J1-MLN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemRedColor"/>
@@ -117,11 +118,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
