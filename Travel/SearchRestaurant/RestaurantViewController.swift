@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SnapKit
 
 class RestaurantViewController: UIViewController {
     @IBOutlet var restaurantSearchBar: UISearchBar!
@@ -23,44 +24,9 @@ class RestaurantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureTableView()
         configureBarView()
-    }
-    
-    func configureTableView() {
-        restaurantTableView.rowHeight = 150
-        
-        let xib = UINib(nibName: RestaurantTableViewCell.identifier, bundle: nil)
-        restaurantTableView.register(xib, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
-        
-        restaurantTableView.delegate = self
-        restaurantTableView.dataSource = self
-        restaurantSearchBar.delegate = self
-    }
-}
-
-extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
-        
-        let data = filteredList[indexPath.row]
-        cell.configureRestaurantCell(data: data)
-        
-        cell.heartButton.tag = indexPath.row
-        cell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
-        
-        return cell
-    }
-    
-    @objc func heartButtonClicked(sender: UIButton) {
-        restaurantList[sender.tag].like.toggle()
-        filteredList[sender.tag].like.toggle()
+        configureTableView()
+        allFoodButtonClicked()
     }
 }
 
@@ -82,13 +48,64 @@ extension RestaurantViewController: UISearchBarDelegate {
     
     func configureBarView() {
         navigationItem.title = "식당 🔍"
+        let allFood = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allFoodButtonClicked))
+        allFood.tintColor = .black
+        let category = UIBarButtonItem(title: "분류", style: .plain, target: self, action: #selector(categoryButtonClicked))
+        category.tintColor = .red
+        navigationItem.leftBarButtonItems = [allFood, category]
         
-        
+        restaurantSearchBar.delegate = self
+    }
+    
+    @objc func allFoodButtonClicked() {
+        restaurantSearchBar.text = ""
+        restaurantSearchBar.placeholder = "식당 혹은 카테고리를 검색해 보세요!"
+        filteredList = restaurantList
+    }
+    
+    @objc func categoryButtonClicked() {
+        configureCategoryPicker()
     }
 }
 
-
 extension RestaurantViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func configureCategoryPicker() {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        let alert = configureCategoryAlert()
+        alert.view.addSubview(pickerView)
+        pickerView.snp.makeConstraints {
+            $0.center.equalTo(alert.view)
+            $0.width.equalTo(250)
+        }
+    }
+    
+    func configureCategoryAlert() -> UIAlertController {
+        let alert = UIAlertController(title: "😋 무엇을 먹을까요?", message: "\n\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
+        let selectAction = UIAlertAction(title: "검색", style: .destructive) { _ in
+            let selectedRow = self.pickerView.selectedRow(inComponent: 0)
+            self.searchCategory(self.categoryList[selectedRow])
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(selectAction)
+        alert.addAction(cancelAction)
+        
+        view.addSubview(alert.view)
+        alert.view.snp.makeConstraints {
+            $0.center.equalTo(view.safeAreaLayoutGuide)
+        }
+        present(alert, animated: true, completion: nil)
+        return alert
+    }
+    
+    func searchCategory(_ selectedCategory: String) {
+        filteredList.removeAll()
+        restaurantList.forEach {
+            if $0.category == selectedCategory { filteredList.append($0) }
+        }
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -102,6 +119,40 @@ extension RestaurantViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        restaurantSearchBar.placeholder = categoryList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        40
+    }
+}
+
+extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
+    func configureTableView() {
+        restaurantTableView.delegate = self
+        restaurantTableView.dataSource = self
+        restaurantTableView.rowHeight = 150
+        let xib = UINib(nibName: RestaurantTableViewCell.identifier, bundle: nil)
+        restaurantTableView.register(xib, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
+        let data = filteredList[indexPath.row]
+        cell.configureRestaurantCell(data: data)
         
+        cell.heartButton.tag = indexPath.row
+        cell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
+        return cell
+    }
+    
+    @objc func heartButtonClicked(sender: UIButton) {
+        restaurantList[sender.tag].like.toggle()
+        filteredList[sender.tag].like.toggle()
     }
 }
