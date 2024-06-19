@@ -11,4 +11,6 @@ enum UIImages {
     static let share = UIImage(systemName: "square.and.arrow.up")
     static let xmark = UIImage(systemName: "xmark")
     static let map = UIImage(systemName: "map.fill")
+    static let choice = UIImage(systemName: "hand.point.up.left.and.text.fill")
 }
+

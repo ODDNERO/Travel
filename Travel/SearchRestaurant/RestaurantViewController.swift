@@ -48,6 +48,7 @@ extension RestaurantViewController: UISearchBarDelegate {
     
     func configureBarView() {
         navigationItem.title = "식당 🔍"
+        navigationItem.backButtonTitle = ""
         
         let allFood = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allFoodButtonClicked))
         let category = UIBarButtonItem(title: "분류", style: .plain, target: self, action: #selector(categoryButtonClicked))
