@@ -35,6 +35,7 @@
 		CE693F592C03E35300B77A20 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE693F582C03E35300B77A20 /* Kingfisher */; };
 		CE693F5B2C03E58A00B77A20 /* TravelMagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F5A2C03E58A00B77A20 /* TravelMagazineTableViewController.swift */; };
 		CE693F5D2C03E67A00B77A20 /* TravelMagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE693F5C2C03E67900B77A20 /* TravelMagazineTableViewCell.swift */; };
+		CE8CEE8F2C22EACF001BE6BA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8CEE8E2C22EACF001BE6BA /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE693F592C03E35300B77A20 /* Kingfisher in Frameworks */,
+				CE8CEE8F2C22EACF001BE6BA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +109,10 @@
 		CE55E9E42C0611D000F69397 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CE127B2A2C08EE580062EA2A /* UIImages.swift */,
 				CE64D5242C04A858006A14A7 /* DateFormatter+.swift */,
 				CE55EA092C086E8000F69397 /* UIViewController+.swift */,
+				CE127B392C0C8A0B0062EA2A /* ReuseldentifierProtocol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,12 +166,10 @@
 				CE55E9E22C05FF4300F69397 /* TravelMagazine */,
 				CE55E9E32C06117600F69397 /* SearchRestaurant */,
 				CE55E9EB2C06444300F69397 /* CitySpots */,
-				CE127B2A2C08EE580062EA2A /* UIImages.swift */,
 				CE693F472C03DA3200B77A20 /* Main.storyboard */,
 				CE693F4A2C03DA3400B77A20 /* Assets.xcassets */,
 				CE693F4C2C03DA3400B77A20 /* LaunchScreen.storyboard */,
 				CE693F4F2C03DA3400B77A20 /* Info.plist */,
-				CE127B392C0C8A0B0062EA2A /* ReuseldentifierProtocol.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 			name = Travel;
 			packageProductDependencies = (
 				CE693F582C03E35300B77A20 /* Kingfisher */,
+				CE8CEE8E2C22EACF001BE6BA /* SnapKit */,
 			);
 			productName = Travel;
 			productReference = CE693F3E2C03DA3200B77A20 /* Travel.app */;
@@ -221,6 +224,7 @@
 			mainGroup = CE693F352C03DA3200B77A20;
 			packageReferences = (
 				CE693F572C03E35300B77A20 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CE8CEE8D2C22EACF001BE6BA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = CE693F3F2C03DA3200B77A20 /* Products */;
 			projectDirPath = "";
@@ -515,6 +519,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		CE8CEE8D2C22EACF001BE6BA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -522,6 +534,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE693F572C03E35300B77A20 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CE8CEE8E2C22EACF001BE6BA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8CEE8D2C22EACF001BE6BA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
