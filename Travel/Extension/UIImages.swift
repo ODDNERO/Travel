@@ -12,5 +12,6 @@ enum UIImages {
     static let xmark = UIImage(systemName: "xmark")
     static let map = UIImage(systemName: "map.fill")
     static let choice = UIImage(systemName: "hand.point.up.left.and.text.fill")
+    static let location = UIImage(systemName: "location.circle.fill")
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 import MapKit
 import SnapKit
 
@@ -19,6 +20,13 @@ enum LocationCategory {
 class RestaurantMapViewController: UIViewController {
     let mapView = MKMapView()
     let locationManager = CLLocationManager()
+    let userLocationButton = {
+        let button = UIButton()
+        button.setImage(UIImages.location, for: .normal)
+        button.contentMode = .scaleAspectFill
+        button.tintColor = .systemCyan
+        return button
+    }()
     
     let pickerView = UIPickerView()
     let categoryList = ["한식", "카페", "중식", "분식", "일식", "경양식", "양식"]
@@ -29,7 +37,8 @@ class RestaurantMapViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureNavigationBar()
-        configureAnnotation(.allRestaurant)
+        checkLocationAuthorization()
+        locationManager.delegate = self
     }
 }
 
@@ -51,15 +60,66 @@ extension RestaurantMapViewController {
     }
 }
 
-extension RestaurantMapViewController {
-    func configureMapView(latitude: Double, longitude: Double) {
-        view.addSubview(mapView)
-        mapView.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
-        }
-        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), latitudinalMeters: 700, longitudinalMeters: 700)
+//MARK: - Location
+extension RestaurantMapViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
     
+    func checkLocationAuthorization() {
+        let isEnabled = CLLocationManager.locationServicesEnabled()
+        
+        switch isEnabled {
+        case true:
+            let status = locationManager.authorizationStatus
+            requestLocationAuthorization(status)
+            
+        case false:
+            configureAnnotation(.preset)
+        }
+    }
+    
+    func requestLocationAuthorization(_ status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            configureAnnotation(.preset)
+            requestAuthorizationChange()
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            configureAnnotation(.user)
+        default:
+            configureAnnotation(.preset)
+        }
+    }
+    
+    func requestAuthorizationChange() {
+        let alert = UIAlertController(title: "이런! 위치 서비스를 사용할 수 없어요", message: "'개인정보 보호 및 보안'에서 위치 서비스를 활성화해 주세요", preferredStyle: .alert)
+        
+        let openSetting = UIAlertAction(title: "설정하러 가기", style: .default) { _ in
+            if let setting = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(setting)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(openSetting)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let coordinate = locations.last?.coordinate {
+            addAnnotaion(list: nil, latitude: coordinate.latitude, longitude: coordinate.longitude, title: "현재 위치")
+        }
+        locationManager.stopUpdatingLocation()
+    }
+}
+
+//MARK: - Map
+extension RestaurantMapViewController {
     func configureAnnotation(_ location: LocationCategory) {
         mapView.removeAnnotations(mapView.annotations)
         
@@ -67,7 +127,7 @@ extension RestaurantMapViewController {
         case .preset:
             addAnnotaion(list: nil, latitude: 37.517474, longitude: 126.907357, title: "🌱")
         case .user:
-            print("user")
+            return
         case .allRestaurant:
             addAnnotaion(list: restaurantList, latitude: nil, longitude: nil, title: nil)
         case .filteredRestaurant:
@@ -93,8 +153,34 @@ extension RestaurantMapViewController {
             mapView.addAnnotation(annotation)
         }
     }
+    
+    func configureMapView(latitude: Double, longitude: Double) {
+        view.addSubview(mapView)
+        mapView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), latitudinalMeters: 700, longitudinalMeters: 700)
+        mapView.setRegion(region, animated: true)
+        configureLocationButton()
+    }
+    
+    func configureLocationButton() {
+        mapView.addSubview(userLocationButton)
+        userLocationButton.snp.makeConstraints {
+            $0.leading.top.equalTo(mapView).offset(20)
+            $0.size.equalTo(50)
+        }
+        
+        userLocationButton.addTarget(self, action: #selector(locationButtonClicked), for: .touchUpInside)
+    }
+    
+    @objc func locationButtonClicked() {
+        checkLocationAuthorization()
+    }
 }
 
+//MARK: - Search
 extension RestaurantMapViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func configureCategoryPicker() {
         pickerView.delegate = self
